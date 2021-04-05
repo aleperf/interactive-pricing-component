@@ -1,0 +1,74 @@
+.title {
+  padding: 4rem 0;
+  background-image: url("../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.title {
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: $text-color-dark;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  width: 58rem;
+  max-width: 100%;
+  background-color: $pricing-component-bg-color;
+  padding: 3rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 800;
+    padding: 3rem 1rem;
+    letter-spacing: 2px;
+
+    &-views {
+      text-transform: uppercase;
+      transition: all 0.2;
+      animation: counter 0.2;
+    }
+
+    &-price--number {
+      font-size: 4.2rem;
+      letter-spacing: 1px;
+      color: $text-color-dark;
+      transition: all 0.2;
+    }
+  }
+}
+
+@keyframes counter {
+  0% {
+    opacity: 0.6;
+  }
+
+  30% {
+    opacity: 0.8;
+  }
+
+  60% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

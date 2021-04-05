@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./sass/main.scss">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <!-- <link rel="stylesheet" href="sass/main.scss"> -->
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- PAGE TITLE-->
+    <div class="title">
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card required.</p>
+    </div>
+    <!-- PRICING CARD BEGINNING-->
+    <div class="pricing-card">
+      <!-- VIEW AND PRICES-->
+      <div class="pricing-card__top">
+        <div class="pricing-card__top-views"> 100K Pageviews</div>
+        <div class="pricing-card__top-price">
+          <span class="pricing-card__top-price--number">$16.00</span>/month
+        </div>
+      </div>
+
+      <!-- RANGE SLIDER-->
+      <div class="pricing-card__range-slider">
+
+        <!-- <input type="range" name="price-slider" id="price-slider"> -->
+        <div class="pricing-card__range-slider--track" id="slider-track">
+          <div class="pricing-card__range-slider--run" id="slider-run"></div>
+          <div id="slider-thumb" class="pricing-card__range-slider--thumb" role="slider" aria-valuemin="8"
+            aria-valuemax="36" aria-valuenow="16"></div>
+        </div>
+      </div>
+      <!--CHECKBOX-->
+      <div class="pricing-card__payment-checkbox">
+        <div class="pricing-card__payment-checkbox-label--left">Monthly Billing</div>
+
+        <input type="checkbox" name="payment-checkbox" id="payment-checkbox">
+        <div class="pricing-card__payment-checkbox-label--right">
+          Yearly Billing <span class="discount">25% discount</span>
+        </div>
+        <hr>
+        <!--BENEFITS AND SUBMIT BUTTON-->
+        <div class="pricing-card__bottom">
+          <div class="pricing-card__bottom-benefits">
+
+            <ul>
+              <li>Unlimited websites</li>
+              <li>100% data ownership</li>
+              <li> Email reports</li>
+            </ul>
+
+          </div>
+          <button class="pricing-card__bottom-btn">Start my trial</button>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

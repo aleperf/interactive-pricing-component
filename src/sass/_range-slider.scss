@@ -39,9 +39,13 @@
     box-shadow: 1px 20px 20px rgba($slider-bg-color, 0.3);
     cursor: pointer;
   }
+  &--thumb:hover {
+    background-color: $slider-thumb-active;
+  }
 
   &--thumb.pressed {
-    background-color: $slider-thumb-active;
+    background-color: $slider-bg-color-dark;
+    cursor: grabbing;
   }
 }
 

@@ -7,6 +7,8 @@ const run = document.getElementById("slider-run");
 const views = document.querySelector(".pricing-card__top-views");
 const price = document.querySelector(".pricing-card__top-price--number");
 
+const checkbox = document.getElementById("payment-checkbox");
+
 //let mousePosition;
 let thumbPositionX;
 let thumbOffsetX;
@@ -19,6 +21,20 @@ const step = maxOffset / 4;
 
 let minValue = 10;
 let maxValue = 1000;
+
+let isChecked = false;
+let currentViews = 100;
+
+//checkbox listener
+
+checkbox.addEventListener("change", (e) => {
+  if (e.target.checked) {
+    isChecked = true;
+  } else {
+    isChecked = false;
+  }
+  price.innerHTML = `$${calcCurrentPrice(currentViews)}.00`;
+});
 
 //TIER VIEWS AND PRICES
 
@@ -40,9 +56,8 @@ function thumbFree() {
 }
 
 function updateThumbPosition(currentLeft) {
-  console.log("calling this");
   if (currentLeft <= maxOffset && currentLeft >= minOffset) {
-    let currentViews = calcCurrentViewsLabel(currentLeft);
+    currentViews = calcCurrentViewsLabel(currentLeft);
     if (currentViews === 1000) {
       views.innerHTML = `1M PageViews`;
     } else {
@@ -92,7 +107,7 @@ thumb.addEventListener(
 
 document.addEventListener("mouseup", thumbFree);
 
-document.addEventListener("mousemove", (e) => {
+thumb.addEventListener("mousemove", (e) => {
   moveThumb(e, false);
 });
 
@@ -138,15 +153,22 @@ const calcCurrentViewsLabel = (offsetLeft) => {
 };
 
 const calcCurrentPrice = (currentViews) => {
+  let price;
   if (currentViews < 50) {
-    return 8;
+    price = 8;
   } else if (currentViews < 100) {
-    return 12;
+    price = 12;
   } else if (currentViews < 500) {
-    return 16;
+    price = 16;
   } else if (currentViews < 1000) {
-    return 24;
+    price = 24;
   } else {
-    return 36;
+    price = 36;
+  }
+
+  if (isChecked) {
+    return price - price * 0.25;
+  } else {
+    return price;
   }
 };

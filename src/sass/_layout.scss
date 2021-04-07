@@ -27,8 +27,8 @@
   width: 58rem;
   max-width: 100%;
   background-color: $pricing-component-bg-color;
-  padding: 3rem;
-  border-radius: 10px;
+  padding: 1rem 4rem;
+  border-radius: 10px 10px 0 0;
   font-size: 1.5rem;
 
   &__top {
@@ -42,33 +42,65 @@
 
     &-views {
       text-transform: uppercase;
-      transition: all 0.2;
-      animation: counter 0.2;
     }
 
     &-price--number {
       font-size: 4.2rem;
       letter-spacing: 1px;
       color: $text-color-dark;
-      transition: all 0.2;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $pricing-component-bg-color;
+    padding: 4rem;
+    border-radius: 0 0 15px 15px;
+
+    ul {
+      margin-left: 1rem;
+      list-style-type: none;
+      list-style-image: url("../images/icon-check.svg");
+    }
+
+    ul li:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      border: none;
+      border-radius: 25px;
+      padding: 1rem 4rem;
+      font-family: inherit;
+      color: $cta-text-color;
+      background-color: $text-color-dark;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+
+    button:active {
+      outline: 0;
+      transform: scale(0.98);
     }
   }
 }
 
-@keyframes counter {
-  0% {
-    opacity: 0.6;
-  }
+hr {
+  display: block;
+  border: none;
+  border-top: 2px solid $main-bg-color;
+}
 
-  30% {
-    opacity: 0.8;
-  }
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
 
-  60% {
-    opacity: 0.9;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }

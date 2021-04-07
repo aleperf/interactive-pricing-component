@@ -1,13 +1,14 @@
 .pricing-card__payment-checkbox {
   display: flex;
   margin-bottom: 2rem;
-  justify-content: center;
+  margin-right: 1rem;
+  justify-content: flex-end;
 
   &--container {
     position: relative;
     display: inline-block;
-    width: 70px;
-    height: 34px;
+    width: 60px;
+    height: 30px;
     margin: 0 2rem;
 
     input {
@@ -20,9 +21,9 @@
       }
 
       &:checked + .slider::before {
-        -webkit-transform: translateX(38px);
-        -ms-transform: translateX(38px);
-        transform: translateX(38px);
+        -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+        transform: translateX(30px);
       }
     }
   }
@@ -43,13 +44,29 @@
   &--slider::before {
     position: absolute;
     content: "";
-    height: 23px;
-    width: 23px;
+    height: 22px;
+    width: 22px;
     left: 4px;
-    bottom: 6px;
+    bottom: 4px;
     background-color: white;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 50%;
+  }
+
+  &--label .discount-number {
+    background-color: $discount-bg-color;
+    color: $discount-text-color;
+    font-size: 0.9rem;
+    font-weight: 900;
+    border-radius: 15px;
+    padding: 0.2rem 0.7rem;
+    margin-left: 10px;
+  }
+
+  &--label .discount-number .discount-text {
+    opacity: 1;
+    width: auto;
+    display: inline-block;
   }
 }

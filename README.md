@@ -26,7 +26,7 @@ The price slider updates the views following a non-linear increase in the number
 The component is responsive for mobile and desktop for width ranging from 250px to a full dekstop (1440 and over). <br>
 The project picture for mobile are taken at 375px width, the deskop ones at 1440px, as required per challenge. <br>
 
-Below the pictures of the mobile version:
+Below a picture of the mobile version:
 
 <p align="center">
 <img  src="./src/preview-images/mobile375.png" width="300">

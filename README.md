@@ -32,4 +32,4 @@ Below the pictures of the mobile version:
 <img  src="./src/preview-images/mobile375.png" width="300">
 </p>
 
-You can see the project live at this [dedicated github page](https://github.com/aleperf/article-preview-component);
+You can see the project live at this [dedicated github page](https://github.com/aleperf/interactive-pricing-component);

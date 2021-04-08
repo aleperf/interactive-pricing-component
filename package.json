@@ -2,8 +2,8 @@
   "name": "interactive-price-component",
   "version": "1.0.0",
   "description": "Interactive Price Component",
-  "homepage": "https://github.com/aleperf/article-preview-component",
-  "main": "js/main.js",
+  "homepage": "https://aleperf.github.io/interactive-pricing-component/",
+  "main": "index.js",
   "scripts": {
     "dev": "rm -rf ./development && rm -rf ./.cache && parcel src/index.html --out-dir development -p 3000",
     "build": "parcel build src/*.html --out-dir dist --public-url /article-preview-component",

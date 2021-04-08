@@ -9,7 +9,6 @@ const price = document.querySelector(".pricing-card__top-price--number");
 
 const checkbox = document.getElementById("payment-checkbox");
 
-//let mousePosition;
 let thumbPositionX;
 let thumbOffsetX;
 let isDown = false;

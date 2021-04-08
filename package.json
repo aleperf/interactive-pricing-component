@@ -2,17 +2,20 @@
   "name": "interactive-price-component",
   "version": "1.0.0",
   "description": "Interactive Price Component",
-  "main": "index.js",
+  "homepage": "https://github.com/aleperf/article-preview-component",
+  "main": "js/main.js",
   "scripts": {
     "dev": "rm -rf ./development && rm -rf ./.cache && parcel src/index.html --out-dir development -p 3000",
-    "build": "parcel build src/*.html --out-dir dist --public-url ./"
+    "build": "parcel build src/*.html --out-dir dist --public-url /article-preview-component",
+    "deploy": "gh-pages -d dist"
   },
   "author": "aleperf",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/runtime-corejs2": "^7.13.10",
+    "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.32.8"
   },

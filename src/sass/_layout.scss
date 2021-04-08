@@ -41,10 +41,6 @@
   }
 
   &__top {
-    /*     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -53,8 +49,8 @@
     font-weight: 800;
     padding: 3rem 1rem 0 1rem;
     letter-spacing: 2px;
-
-    @media only screen and (max-width: 600px) {
+    //600px
+    @media only screen and (max-width: 37.5em) {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
     }
@@ -64,14 +60,16 @@
       justify-self: start;
       grid-column: 1/2;
       grid-row: 1/1;
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 37.5em) {
+        //600px
         justify-self: center;
       }
     }
 
     &-price {
       justify-self: end;
-      @media only screen and (max-width: 600px) {
+      //600px
+      @media only screen and (max-width: 37.5em) {
         grid-row: 3;
         justify-self: center;
         align-self: start;
@@ -81,7 +79,8 @@
         font-size: 4.2rem;
         letter-spacing: 1px;
         color: $text-color-dark;
-        @media only screen and (max-width: 500px) {
+        //500px
+        @media only screen and (max-width: 31.25em) {
           font-size: 3.5rem;
         }
       }
@@ -95,17 +94,19 @@
     background-color: $pricing-component-bg-color;
     padding: 4rem;
     border-radius: 0 0 15px 15px;
-
-    @media only screen and (max-width: 500px) {
+    //500px
+    @media only screen and (max-width: 31.25em) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: left;
     }
 
     ul {
       margin-left: 1rem;
       list-style-type: none;
       list-style-image: url("../images/icon-check.svg");
+
       li:not(:last-child) {
         margin-bottom: 1.5rem;
       }
@@ -118,9 +119,13 @@
       font-family: inherit;
       color: $cta-text-color;
       background-color: $text-color-dark;
-
-      @media only screen and (max-width: 500px) {
+      //500px
+      @media only screen and (max-width: 31.25em) {
         margin-top: 3rem;
+      }
+      //280px
+      @media only screen and (max-width: 17.5em) {
+        padding: 1rem 2rem;
       }
     }
 

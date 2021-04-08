@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "rm -rf ./development && rm -rf ./.cache && parcel src/index.html --out-dir development -p 3000",
-    "build": "parcel build src/*.html --out-dir dist --public-url /article-preview-component",
+    "build": "parcel build src/index.html --out-dir dist --public-url ./",
     "deploy": "gh-pages -d dist"
   },
   "author": "aleperf",
